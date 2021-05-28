@@ -1,12 +1,12 @@
 {
-  "name": "user-service",
+  "name": "user-service-1",
   "version": "0.0.1",
   "description": "User crud using loopback",
   "keywords": [
     "loopback-application",
     "loopback"
   ],
-  "main": "types/index.d.ts",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=10.16"
   },

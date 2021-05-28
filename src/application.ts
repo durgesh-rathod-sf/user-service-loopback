@@ -7,6 +7,7 @@ import {
 import {RestApplication} from '@loopback/rest';
 import path from 'path';
 import {MySequence} from './sequence';
+import { SchemaMigrationOptions } from '@loopback/repository';
 
 export {ApplicationConfig};
 
@@ -37,4 +38,5 @@ export class UserServiceApplication extends BootMixin(RestApplication) {
       },
     };
   }
+
 }
