@@ -1,0 +1,52 @@
+{
+  "name": "user-service",
+  "version": "0.0.1",
+  "description": "User crud using loopback",
+  "keywords": [
+    "loopback-application",
+    "loopback"
+  ],
+  "main": "types/index.d.ts",
+  "engines": {
+    "node": ">=10.16"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf dist *.tsbuildinfo .eslintcache",
+    "pretest": "npm run rebuild",
+    "migrate": "node ./dist/migrate",
+    "openapi-spec": "node ./dist/openapi-spec",
+    "rebuild": "npm run clean && npm run build",
+    "prestart": "npm run rebuild",
+    "start": "node -r source-map-support/register .",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Durgesh Rathod <durgesh.rathod@sourcefuse.com>",
+  "license": "",
+  "files": [
+    "README.md",
+    "dist",
+    "src",
+    "!*/__tests__"
+  ],
+  "dependencies": {
+    "@loopback/boot": "^3.2.0",
+    "@loopback/core": "^2.14.0",
+    "@loopback/repository": "^3.4.0",
+    "@loopback/rest": "^9.1.2",
+    "@loopback/rest-explorer": "^3.0.6",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@loopback/testlab": "^3.2.11",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^10.17.51",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.19",
+    "typescript": "~4.1.3"
+  }
+}
